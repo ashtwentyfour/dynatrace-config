@@ -1,6 +1,6 @@
 resource "dynatrace_management_zone_v2" "mzone_azure_aks_dev" {
     name = "AzureAKSDev"
-    description = "Azure Dev/Sandbox Azure Kubernetes Service (AKS) resources"
+    description = "Dev/Sandbox Azure Kubernetes Service (AKS) resources"
     rules {
         rule {
             type            = "ME"
@@ -77,7 +77,7 @@ resource "dynatrace_management_zone_v2" "mzone_azure_aks_dev" {
                         case_sensitive = false
                         key            = "HOST_NAME"
                         operator       = "BEGINS_WITH"
-                        string_value   = "aks"
+                        string_value   = var.azure_aks_dev_vmss
                     }
                 }
             }
