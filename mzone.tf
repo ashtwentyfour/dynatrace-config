@@ -82,5 +82,21 @@ resource "dynatrace_management_zone_v2" "mzone_azure_aks_dev" {
                 }
             }
         }
+        rule {
+            type            = "ME"
+            enabled         = true
+            entity_selector = ""
+            attribute_rule {
+                entity_type = "SERVICE"
+                attribute_conditions {
+                    condition {
+                        case_sensitive = false
+                        key            = "KUBERNETES_CLUSTER_NAME"
+                        operator       = "BEGINS_WITH"
+                        string_value   = "aks-dev"
+                    }
+                }
+            }
+        }
     }
 }
