@@ -77,3 +77,19 @@ resource "dynatrace_custom_tags" "custom_tags_host_azure_aks_dev" {
       }
     }
 }
+
+resource "dynatrace_custom_tags" "custom_tags_pod_azure_aks_dev" {
+    entity_selector = "type(CLOUD_APPLICATION_INSTANCE),mzName(AzureAKSDev)"
+    tags {
+      filter {
+        context = "CONTEXTLESS"
+        key = "Environment"
+        value = "Dev"
+      }
+      filter {
+        context = "CONTEXTLESS"
+        key = "Platform"
+        value = "AKS"
+      }
+    }
+}
