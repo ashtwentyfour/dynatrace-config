@@ -22,7 +22,7 @@ $ terraform apply
 ```
 $ kubectl create ns pets
 
-$ kubectl apply -f https://raw.githubusercontent.com/ashtwentyfour/spring-petclinic/refs/heads/main/k8s/db.yml -n pets
+$ kubectl apply -f https://raw.githubusercontent.com/ashtwentyfour/spring-petclinic/refs/heads/main/k8s/azure/db.yml -n pets
 
-$ kubectl apply -f https://raw.githubusercontent.com/ashtwentyfour/spring-petclinic/refs/heads/main/k8s/petclinic_aks_deploy.yml -n pets
+$ kubectl apply -f https://raw.githubusercontent.com/ashtwentyfour/spring-petclinic/refs/heads/main/k8s/azure/petclinic_aks_deploy.yml -n pets
 ```
