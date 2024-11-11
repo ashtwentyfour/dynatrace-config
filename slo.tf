@@ -13,4 +13,7 @@ resource "dynatrace_slo_v2" "slo_availability_azure_aks_dev" {
     burn_rate_visualization_enabled = true
     fast_burn_threshold = 10
   }
+  depends_on = [
+    dynatrace_management_zone_v2.mzone_azure_aks_dev
+  ]
 }

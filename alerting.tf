@@ -1,6 +1,9 @@
 resource "dynatrace_alerting" "alerting_azure_aks_dev" {
   name            = "AzureAKSDev-Alerting"
   management_zone = "AzureAKSDev"
+  depends_on = [
+    dynatrace_management_zone_v2.mzone_azure_aks_dev
+  ]
   rules {
     rule {
       include_mode     = "INCLUDE_ALL"

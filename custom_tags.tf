@@ -12,6 +12,9 @@ resource "dynatrace_custom_tags" "custom_tags_service_azure_aks_dev" {
         value = "AKS"
       }
     }
+    depends_on = [
+      dynatrace_management_zone_v2.mzone_azure_aks_dev
+    ]
 }
 
 resource "dynatrace_custom_tags" "custom_tags_namespace_azure_aks_dev" {
@@ -28,6 +31,9 @@ resource "dynatrace_custom_tags" "custom_tags_namespace_azure_aks_dev" {
         value = "AKS"
       }
     }
+    depends_on = [
+      dynatrace_management_zone_v2.mzone_azure_aks_dev
+    ]
 }
 
 resource "dynatrace_custom_tags" "custom_tags_workload_azure_aks_dev" {
@@ -44,6 +50,9 @@ resource "dynatrace_custom_tags" "custom_tags_workload_azure_aks_dev" {
         value = "AKS"
       }
     }
+    depends_on = [
+      dynatrace_management_zone_v2.mzone_azure_aks_dev
+    ]
 }
 
 resource "dynatrace_custom_tags" "custom_tags_cluster_azure_aks_dev" {
@@ -60,6 +69,9 @@ resource "dynatrace_custom_tags" "custom_tags_cluster_azure_aks_dev" {
         value = "AKS"
       }
     }
+    depends_on = [
+      dynatrace_management_zone_v2.mzone_azure_aks_dev
+    ]
 }
 
 resource "dynatrace_custom_tags" "custom_tags_host_azure_aks_dev" {
@@ -76,6 +88,9 @@ resource "dynatrace_custom_tags" "custom_tags_host_azure_aks_dev" {
         value = "AKS"
       }
     }
+    depends_on = [
+      dynatrace_management_zone_v2.mzone_azure_aks_dev
+    ]
 }
 
 resource "dynatrace_custom_tags" "custom_tags_pod_azure_aks_dev" {
@@ -92,4 +107,7 @@ resource "dynatrace_custom_tags" "custom_tags_pod_azure_aks_dev" {
         value = "AKS"
       }
     }
+    depends_on = [
+      dynatrace_management_zone_v2.mzone_azure_aks_dev
+    ]
 }
